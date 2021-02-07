@@ -12,6 +12,8 @@ fn.searchRoutes = require("./routes/searchRoutes")
 fn.collectionRoutes = require("./routes/collectionRoutes");
 fn.topicsRoutes = require("./routes/topicsRoutes");
 fn.statsRoutes = require("./routes/statsRoutes")
+fn.userRoutes = require("./routes/userRoutes")
+
 
 app.use(express.json());
 
@@ -24,6 +26,7 @@ app.use("/search", fn.searchRoutes);
 app.use("/collections", fn.searchRoutes);
 app.use("/topics", fn.topicsRoutes)
 app.use("/stats", fn.statsRoutes)
+app.use("/users/", fn.userRoutes)
 
 
 app.listen(5000, () => {
